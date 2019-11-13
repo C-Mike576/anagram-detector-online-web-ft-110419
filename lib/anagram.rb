@@ -9,11 +9,13 @@ class Anagram
   end
   
   def match(arr)
+    master = []
     arr.each do |x|
-      master = x.split("")
-    
+      if @word.split("").sort == x.split("").sort
+        master << x
+      end
     end
-    
+    master
   end
   
   
